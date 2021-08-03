@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>4LineGame.</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/FourLineGameStyle.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -80,7 +81,62 @@
 				</nav>
 
 				<div class="container">
-				<table></table>
+				<table id="board" class="board">
+					<tr>
+						<td><button id="cell0" type="button"></button></td>
+						<td><button id="cell1" type="button"></button></td>
+						<td><button id="cell2" type="button"></button></td>
+						<td><button id="cell3" type="button"></button></td>
+						<td><button id="cell4" type="button"></button></td>
+						<td><button id="cell5" type="button"></button></td>
+						<td><button id="cell6" type="button"></button></td>
+					</tr>
+					<tr>
+						<td><button id="cell7" type="button"></button></td>
+						<td><button id="cell8" type="button"></button></td>
+						<td><button id="cell9" type="button"></button></td>
+						<td><button id="cell10" type="button"></button></td>
+						<td><button id="cell11" type="button"></button></td>
+						<td><button id="cell12" type="button"></button></td>
+						<td><button id="cell13" type="button"></button></td>
+					</tr>
+					<tr>
+						<td><button id="cell14" type="button"></button></td>
+						<td><button id="cell14" type="button"></button></td>
+						<td><button id="cell16" type="button"></button></td>
+						<td><button id="cell17" type="button"></button></td>
+						<td><button id="cell18" type="button"></button></td>
+						<td><button id="cell19" type="button"></button></td>
+						<td><button id="cell20" type="button"></button></td>
+					</tr>
+					<tr>
+						<td><button id="cell21" type="button"></button></td>
+						<td><button id="cell22" type="button"></button></td>
+						<td><button id="cell23" type="button"></button></td>
+						<td><button id="cell24" type="button"></button></td>
+						<td><button id="cell25" type="button"></button></td>
+						<td><button id="cell26" type="button"></button></td>
+						<td><button id="cell27" type="button"></button></td>
+					</tr>
+					<tr>
+						<td><button id="cell28" type="button"></button></td>
+						<td><button id="cell29" type="button"></button></td>
+						<td><button id="cell30" type="button"></button></td>
+						<td><button id="cell31" type="button"></button></td>
+						<td><button id="cell32" type="button"></button></td>
+						<td><button id="cell33" type="button"></button></td>
+						<td><button id="cell34" type="button"></button></td>
+					</tr>
+					<tr>
+						<td><button id="cell35" type="button"></button></td>
+						<td><button id="cell36" type="button"></button></td>
+						<td><button id="cell37" type="button"></button></td>
+						<td><button id="cell38" type="button"></button></td>
+						<td><button id="cell39" type="button"></button></td>
+						<td><button id="cell40" type="button"></button></td>
+						<td><button id="cell41" type="button"></button></td>
+					</tr>
+				</table>
 				</div>
 			</div>	
 			</div>
@@ -89,10 +145,10 @@
 			<div class="card border-primary">
 			<div class="card-header">Score.</div>
 			<div class="card-body">
-				<h4>Player A.</h4>
-				<h3 style="text-align: center">0</h3>
-				<h4>Player B.</h4>
-				<h3 style="text-align: center;">0</h3>
+				<h4 id="scr-pl-a-name">Player A.</h4>
+				<h3 id="scr-pl-a" style="text-align: center">0</h3>
+				<h4 id="scr-pl-b-name">Player B.</h4>
+				<h3 id="scr-pl-b" style="text-align: center;">0</h3>
 			</div>
 			</div>
 		</div>
