@@ -9,19 +9,28 @@ class App{
 		
 		switch(namePlayer.id){
 			case "pl-a-name":
-				console.log(namePlayer.id);
-				console.log(namePlayer.value);
 				this.players[0].name = namePlayer.value;
 				break;
 			case "pl-b-name":
-				console.log(namePlayer.id);
-				console.log(namePlayer.value);
 				this.players[1].name = namePlayer.value;
 				break;
 			default:
 				//pass
 		}
 	}
+
+	 setPlyrColor(colorPicker){
+	 	switch(colorPicker.id){
+	 		case "pl-a-color":
+	 			this.players[0].color = colorPicker.value;
+        		break;
+        	case "pl-b-color":
+        		this.players[1].color = colorPicker.value;
+        		break;
+        	default:
+        		//pass
+	 	}        
+    }
 
 	setBrdColor(colorBoard){
 		console.log(colorBoard.id);
