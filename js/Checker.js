@@ -18,5 +18,22 @@ class Checker{
 		}
 		return l_return;
 	}
+
+	static isVertWin(board){
+		var l_return = false;
+		for(var c = 0; c < board[0].length; c++){
+			for(var r = 0; r < board.length - 3; r++){
+
+				if((board[r][c]   !== 0 &&
+					board[r+1][c] !== 0 &&
+					board[r+2][c] !== 0 &&
+					board[r+3][c] !== 0 )
+					&&
+			   	   (board[r][c]   === board[r+1][c] &&
+			   		board[r+1][c] === board[r+2][c] &&
+			   		board[r+2][c] === board[r+3][c])){l_return = true; break;}
+			}
+		}
+	}
 	
 }
