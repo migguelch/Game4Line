@@ -44,8 +44,7 @@ class App{
 		this.board.setDataInfo(this.game.turns, this.players[this.game.currentPlayer].name);
 	}
 
-	startGame(){
-		console.log("Restar Game !!!");
+	startGame(){		
 		this.game.startStatus();
 		this.board.setDataScore(
 			this.players[0].name,
@@ -65,6 +64,14 @@ class App{
 		let rw,cl;
 		rw = Math.floor(cell/7);
 		cl = cell%7;
-		console.log("cell: ",cell," rw: ",rw," cl: ",cl);
+		//console.log("cell: ",cell," rw: ",rw," cl: ",cl);
+
+		if(this.game.isCellTaken(rw, cl)){
+			alert(stat.config.takenMsg);			
+		}else{
+			this.game.setCell(rw, cl);
+			this.board.printCell(cell, this.players[this.game.currentPlayer].color);
+			this.rotatePlay();
+		}
 	}
 }

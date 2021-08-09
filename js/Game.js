@@ -15,4 +15,12 @@ class Game{
 		this.turns++;
 		this.currentPlayer =(++this.currentPlayer)%2
 	}
+
+	setCell(rw,cl){
+		this.GameStatus[rw][cl] = this.currentPlayer + 1;
+	}
+
+	isCellTaken(rw, cl){
+		return this.GameStatus[rw][cl] !== 0;
+	}
 }

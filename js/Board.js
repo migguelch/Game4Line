@@ -37,4 +37,9 @@ class Board{
 		this.turns.innerHTML = iTurn;
 		this.player.innerHTML = iPlayer;
 	}
+
+
+	printCell(cell, color){
+		document.getElementById("cell"+cell).style.backgroundColor = color;
+	}
 }
