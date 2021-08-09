@@ -61,16 +61,17 @@ class App{
 	}
 
 	setSelectedCell(cell){
-		let rw,cl;
+		let rw,cl,drw;
 		rw = Math.floor(cell/7);
 		cl = cell%7;
 		//console.log("cell: ",cell," rw: ",rw," cl: ",cl);
 
 		if(this.game.isCellTaken(rw, cl)){
-			alert(stat.config.takenMsg);			
+			alert("stat.config.takenMsg");			
 		}else{
-			this.game.setCell(rw, cl);
-			this.board.printCell(cell, this.players[this.game.currentPlayer].color);
+			drw = this.game.dropDown(rw,cl);
+			this.game.setCell(drw, cl);
+			this.board.printCell(drw, cl, this.players[this.game.currentPlayer].color);
 			this.rotatePlay();
 		}
 	}

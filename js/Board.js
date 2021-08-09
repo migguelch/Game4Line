@@ -39,7 +39,8 @@ class Board{
 	}
 
 
-	printCell(cell, color){
-		document.getElementById("cell"+cell).style.backgroundColor = color;
+	printCell(rw, cl, color){
+		var cell = "cell"+((7*rw)+cl);
+		document.getElementById(cell).style.backgroundColor = color;
 	}
 }
