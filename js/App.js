@@ -32,7 +32,11 @@ class App{
         		break;
         	default:
         		//pass
-	 	}        
+	 	}
+
+	 	this.board.printBoard(this.game.GameStatus, 
+	 						  this.players[0].color, 
+	 						  this.players[1].color);        
     }
 
 	setBrdColor(colorBoard){

@@ -43,4 +43,21 @@ class Board{
 		var cell = "cell"+((7*rw)+cl);
 		document.getElementById(cell).style.backgroundColor = color;
 	}
+
+	printBoard(board, PlyAColor, PlyBColor){		
+		for (var r = 0; r < board.length; r++){
+			for (var c = 0; c < board[0].length; c++){
+				switch(board[r][c]){
+					case 1:
+						this.printCell(r, c, PlyAColor);
+						break;
+					case 2:
+						this.printCell(r, c, PlyBColor);
+						break;
+					default:
+						//pass						
+				}
+			}
+		}
+	}
 }
