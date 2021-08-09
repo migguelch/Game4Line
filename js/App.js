@@ -10,9 +10,11 @@ class App{
 		switch(namePlayer.id){
 			case "pl-a-name":
 				this.players[0].name = namePlayer.value;
+				this.board.setScrAName(namePlayer.value.substr(0,7).toUpperCase());
 				break;
 			case "pl-b-name":
 				this.players[1].name = namePlayer.value;
+				this.board.setScrBName(namePlayer.value.substr(0,7).toUpperCase());
 				break;
 			default:
 				//pass
@@ -33,8 +35,7 @@ class App{
     }
 
 	setBrdColor(colorBoard){
-		console.log(colorBoard.id);
-		console.log(colorBoard.value);
+		this.board.setBoardColor(colorBoard.value);
 	}
 
 	setSelectedCell(cell){
