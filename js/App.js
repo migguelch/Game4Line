@@ -38,6 +38,15 @@ class App{
 		this.board.setBoardColor(colorBoard.value);
 	}
 
+	startGame(){
+		console.log("Restar Game !!!");
+		this.game.startStatus();
+	}
+
+	restarGame(){
+		this.startGame();
+	}
+
 	setSelectedCell(cell){
 		let rw,cl;
 		rw = Math.floor(cell/7);

@@ -3,6 +3,7 @@ class Board{
 		this.nameA  = document.getElementById("scr-pl-a-name");
 		this.nameB  = document.getElementById("scr-pl-b-name");
 		this.board = document.getElementById("board");
+
 	}
 
 	setBoardColor(color){
@@ -16,6 +17,4 @@ class Board{
 	setScrBName(iName){
 		this.nameB.innerHTML = iName;
 	}
-
-	
 }
