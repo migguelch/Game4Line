@@ -19,6 +19,7 @@ class App{
 			default:
 				//pass
 		}
+		this.board.setCurrPlayer(this.players[this.game.currentPlayer].name);
 	}
 
 	 setPlyrColor(colorPicker){
@@ -38,9 +39,22 @@ class App{
 		this.board.setBoardColor(colorBoard.value);
 	}
 
+	rotatePlay(){
+		this.game.setmove();
+		this.board.setDataInfo(this.game.turns, this.players[this.game.currentPlayer].name);
+	}
+
 	startGame(){
 		console.log("Restar Game !!!");
 		this.game.startStatus();
+		this.board.setDataScore(
+			this.players[0].name,
+			this.players[0].score,
+			this.players[1].name,
+			this.players[1].score);
+		this.board.setDataInfo(
+			this.game.turns,
+			this.players[this.game.currentPlayer].name);
 	}
 
 	restarGame(){
