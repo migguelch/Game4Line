@@ -22,6 +22,22 @@ class Board{
 		this.nameB.innerHTML = iName;
 	}
 
+	setPlyrScore(iPlayer, iScr){
+		switch(iPlayer){
+			case 0:
+				this.scoreA.innerHTML = iScr;
+				break;
+			case 1:
+				this.scoreB.innerHTML = iScr;
+				break;
+			case 2:
+				break;
+			default:
+				break;
+		}		
+	}
+
+
 	setDataScore(aName, aScr, bName, bScr){
 		this.nameA.innerHTML  = aName;
 		this.scoreA.innerHTML = aScr;

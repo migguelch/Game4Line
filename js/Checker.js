@@ -1,6 +1,6 @@
 class Checker{
 
-	static isHortwin(board){
+	static isHortWin(board){
 		var l_return = false;
 		for(var r = board.length - 1; r >= 0; r--){
 			for(var c = 0; c <= board[0].length - 4; c++){

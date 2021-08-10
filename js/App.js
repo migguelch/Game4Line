@@ -80,7 +80,14 @@ class App{
 			drw = this.game.dropDown(rw,cl);
 			this.game.setCell(drw, cl);
 			this.board.printCell(drw, cl, this.players[this.game.currentPlayer].color);
-			this.isWinner(app.game.GameStatus)
+			if(this.isWinner(app.game.GameStatus)){
+				this.players[this.game.currentPlayer].addScore();
+				this.board.setPlyrScore(
+						this.game.currentPlayer, 
+						this.players[this.game.currentPlayer].score);
+
+			}
+
 			this.rotatePlay();
 		}
 	}
