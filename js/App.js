@@ -64,6 +64,10 @@ class App{
 		this.startGame();
 	}
 
+	isWinner(board){
+		return Checker.isHortWin(board) || Checker.isVertWin(board) || Checker.isDiagWin(app.game.GameStatus);
+	}
+
 	setSelectedCell(cell){
 		let rw,cl,drw;
 		rw = Math.floor(cell/7);
@@ -76,6 +80,7 @@ class App{
 			drw = this.game.dropDown(rw,cl);
 			this.game.setCell(drw, cl);
 			this.board.printCell(drw, cl, this.players[this.game.currentPlayer].color);
+			this.isWinner(app.game.GameStatus)
 			this.rotatePlay();
 		}
 	}
