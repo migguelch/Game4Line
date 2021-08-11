@@ -3,6 +3,9 @@ class App{
 		this.game    = game;
 		this.players = players;
 		this.board   = board;
+		this.msgs    = {takenMsg: "This position is already taken.",
+						evenMsg: "the game is tied.",
+  						winMsg: "The winner is the Player COLOR"};
 	}
 
 	setPlyrName(namePlayer){
