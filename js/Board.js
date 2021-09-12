@@ -71,7 +71,8 @@ class Board{
 						this.printCell(r, c, PlyBColor);
 						break;
 					default:
-						//pass						
+						this.printCell(r, c, "#FFFFFF");
+						break;						
 				}
 			}
 		}
