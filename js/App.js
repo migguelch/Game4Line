@@ -102,6 +102,16 @@ class App{
 	 				this.players[0].color, 
 	 				this.players[1].color
 				);
+			}else{
+				if(this.game.turns == 42){
+					alert(this.msgs.evenMsg);
+					this.game.restartStatus();
+					this.board.printBoard(
+						this.game.GameStatus,
+						this.players[0].color,
+						this.players[1].color
+					);
+				}
 			}
 
 			this.rotatePlay();
