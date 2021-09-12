@@ -61,10 +61,17 @@ class App{
 		this.board.setDataInfo(
 			this.game.turns,
 			this.players[this.game.currentPlayer].name);
+		this.board.printBoard(
+			this.game.GameStatus, 
+	 		this.players[0].color, 
+	 		this.players[1].color
+		)
 	}
 
 	restarGame(){
-		this.startGame();
+		if(confirm("Do you Really want to Reset the Game?")){
+			this.startGame();
+		}
 	}
 
 	isWinner(board){
