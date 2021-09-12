@@ -85,7 +85,7 @@ class App{
 		//console.log("cell: ",cell," rw: ",rw," cl: ",cl);
 
 		if(this.game.isCellTaken(rw, cl)){
-			alert("stat.config.takenMsg");			
+			alert(this.msgs.takenMsg);			
 		}else{
 			drw = this.game.dropDown(rw,cl);
 			this.game.setCell(drw, cl);
