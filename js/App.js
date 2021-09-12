@@ -5,7 +5,7 @@ class App{
 		this.board   = board;
 		this.msgs    = {takenMsg: "This position is already taken.",
 						evenMsg: "the game is tied.",
-  						winMsg: "The winner is the Player COLOR"};
+  						winMsg: "The winner is the Player "};
 	}
 
 	setPlyrName(namePlayer){
@@ -95,7 +95,13 @@ class App{
 				this.board.setPlyrScore(
 						this.game.currentPlayer, 
 						this.players[this.game.currentPlayer].score);
-
+				alert(this.msgs.winMsg + this.players[this.game.currentPlayer].name);
+				this.game.restartStatus();
+				this.board.printBoard(
+					this.game.GameStatus, 
+	 				this.players[0].color, 
+	 				this.players[1].color
+				);
 			}
 
 			this.rotatePlay();
